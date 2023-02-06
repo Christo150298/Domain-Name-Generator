@@ -18,6 +18,4 @@ window.onload = () => {
   for (let i = 0; i < noun.length; i++) {
     console.log(noun[i]);
   }
-
-  const aleatorio = () => {};
 };
