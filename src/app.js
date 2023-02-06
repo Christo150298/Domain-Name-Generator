@@ -5,17 +5,16 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = () => {
-  const pronoun = ["the", "our"];
-  const adj = ["great", "big"];
-  const noun = ["jogger", "racoon"];
+  let pronoun = ["the", "our"];
+  let adj = ["great", "big"];
+  let noun = ["jogger", "racoon"];
 
-  for (let i = 0; i < pronoun.length; i++) {
-    console.log(pronoun[i]);
-  }
-  for (let i = 0; i < adj.length; i++) {
-    console.log(adj[i]);
-  }
-  for (let i = 0; i < noun.length; i++) {
-    console.log(noun[i]);
-  }
-};
+  for (let pronounIndx = 0; pronounIndx < pronoun.length; pronoun++) {
+    console.log(pronoun[pronounIndx]);
+    for (let adjIndx = 0; adjIndx < adj.length; adj++) {
+      console.log(adj[adjIndx]);
+      for (let nounIndx = 0; nounIndx < noun.length; noun++) {
+      console.log(noun[nounIndx]);
+      }
+    }
+  };
