@@ -9,12 +9,24 @@ window.onload = () => {
   let adj = ["great", "big"];
   let noun = ["jogger", "racoon"];
 
-  for (let pronounIndx = 0; pronounIndx < pronoun.length; pronoun++) {
-    console.log(pronoun[pronounIndx]);
-    for (let adjIndx = 0; adjIndx < adj.length; adj++) {
-      console.log(adj[adjIndx]);
-      for (let nounIndx = 0; nounIndx < noun.length; noun++) {
-      console.log(noun[nounIndx]);
+  function generadorAleatorio(param1, param2, param3) {
+    for (let a = 0; a < param1.length; a++) {
+      for (let b = 0; b < param2.length; b++) {
+        for (let c = 0; c < param3.length; c++) {
+          let nuevoNombre = document.createTextNode(
+            param1[a] + param2[b] + param3[c] + ".com"
+          );
+          let lista = document.querySelector("#listaNombresDominios");
+          let elemento = document.createElement("div");
+          elemento.className = "alert alert-dark";
+          lista.appendChild(elemento);
+          elemento.appendChild(nuevoNombre);
+        }
       }
     }
-  };
+  }
+  document.querySelector("#boton").addEventListener("click", function() {
+    generadorAleatorio(pronoun, adj, noun);
+    document.querySelector("#boton").style.display = "none";
+  });
+};
