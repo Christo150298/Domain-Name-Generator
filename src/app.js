@@ -25,7 +25,7 @@ window.onload = () => {
       }
     }
   }
-  document.querySelector("#boton").addEventListener("click", function() {
+  document.querySelector("#boton").addEventListener("click", () => {
     generadorAleatorio(pronoun, adj, noun);
     document.querySelector("#boton").style.display = "none";
   });
